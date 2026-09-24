@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Login Page</title>
 
@@ -110,6 +111,23 @@
 
             font-size: 15px;
         }
+
+        .register-link {
+            text-align: center;
+            color: #999999;
+            margin-top: 20px;
+        }
+
+        .register-link a {
+            color: #ff8c00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register-link a:hover {
+            color: #ffa31a;
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -127,20 +145,12 @@
 
         <label>Username</label>
 
-        <input
-            type="text"
-            id="username"
-            placeholder="Enter your username"
-        >
+        <input type="text" id="username" placeholder="Enter your username">
 
 
         <label>Password</label>
 
-        <input
-            type="password"
-            id="password"
-            placeholder="Enter your password"
-        >
+        <input type="password" id="password" placeholder="Enter your password">
 
 
         <button onclick="login()">
@@ -149,6 +159,11 @@
 
 
         <p id="message"></p>
+
+        <p class="register-link">
+            Don't have an account?
+            <a href="registartion.html">Register here</a>
+        </p>
 
     </div>
 
@@ -206,4 +221,5 @@
     </script>
 
 </body>
+
 </html>
