@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            color: white;
+            min-height: 100vh;
+        }
+
+
+        /* NAVBAR */
+
+        nav {
+            height: 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 50px;
+
+            background-color: #111111;
+
+            border-bottom: 2px solid #ff8c00;
+        }
+
+        nav h2 {
+            color: #ff8c00;
+            font-size: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+
+            margin-left: 25px;
+
+            font-size: 16px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff8c00;
+        }
+
+
+        /* HERO SECTION */
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px 60px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            color: #ff8c00;
+
+            margin-bottom: 20px;
+
+            animation: welcome 2s ease;
+        }
+
+        .hero p {
+            color: #cccccc;
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
+            display: inline-block;
+
+            padding: 13px 30px;
+
+            background-color: #ff8c00;
+            color: black;
+
+            text-decoration: none;
+
+            border-radius: 7px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .hero a:hover {
+            background-color: #ffa31a;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+        }
+
+
+        /* CARDS */
+
+        .cards {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 25px;
+
+            padding: 30px 40px 80px;
+
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 280px;
+
+            padding: 30px;
+
+            background-color: #111111;
+
+            border: 1px solid #333333;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+
+            border-color: #ff8c00;
+
+            box-shadow: 0 0 25px rgba(255, 140, 0, 0.3);
+        }
+
+        .card .icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            color: #ff8c00;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #bbbbbb;
+            line-height: 1.6;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+
+            padding: 20px;
+
+            background-color: #111111;
+
+            border-top: 1px solid #333333;
+
+            color: #777777;
+        }
+
+
+        /* ANIMATION */
+
+        @keyframes welcome {
+
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 0 20px;
+            }
+
+            nav a {
+                margin-left: 10px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .cards {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <h2>My Home</h2>
+
+        <div>
+
+            <a href="home.html">Home</a>
+
+            <a href="#">About</a>
+
+            <a href="#">Services</a>
+
+            <a href="index.html">Logout</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1>Welcome!</h1>
+
+        <p>
+            Welcome to your home page.
+            You have successfully logged in.
+        </p>
+
+        <a href="#features">
+            Explore
+        </a>
+
+    </section>
+
+
+
+    <!-- FEATURES -->
+
+    <section class="cards" id="features">
+
+
+        <div class="card">
+
+            <div class="icon">
+                👤
+            </div>
+
+            <h2>Profile</h2>
+
+            <p>
+                View and manage your personal profile information.
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="icon">
+                📋
+            </div>
+
+            <h2>Tasks</h2>
+
+            <p>
+                Keep track of your daily activities and tasks.
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="icon">
+                ⚙️
+            </div>
+
+            <h2>Settings</h2>
+
+            <p>
+                Manage your preferences and account settings.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 My Home. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>

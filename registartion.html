@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .register-box {
+            width: 400px;
+            padding: 35px;
+            background-color: #111111;
+            border: 2px solid #ff8c00;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(255, 140, 0, 0.4);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff8c00;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            color: white;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+
+            background-color: #222222;
+            color: white;
+
+            border: 1px solid #555;
+            border-radius: 6px;
+
+            outline: none;
+            font-size: 15px;
+        }
+
+        input:focus {
+            border-color: #ff8c00;
+            box-shadow: 0 0 5px rgba(255, 140, 0, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+
+            background-color: #ff8c00;
+            color: black;
+
+            border: none;
+            border-radius: 6px;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ffa31a;
+        }
+
+        #message {
+            text-align: center;
+            color: #ff8c00;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="register-box">
+
+        <h1>Registration</h1>
+
+        <label>Name</label>
+        <input type="text" id="name">
+
+        <label>Age</label>
+        <input type="number" id="age">
+
+        <label>Phone Number</label>
+        <input type="tel" id="phone">
+
+        <label>Password</label>
+        <input type="password" id="password">
+
+        <button onclick="register()">Register</button>
+
+        <p id="message"></p>
+
+    </div>
+
+
+    <script>
+
+        function register() {
+
+            let name = document.getElementById("name").value;
+            let number = document.getElementById("phone").value;
+            let age = document.getElementById("age").value;
+            let password = document.getElementById("password").value;
+
+
+            if (name == "") {
+                document.getElementById("message").textContent = "Enter name";
+                return;
+            }
+
+            if (age == "") {
+                document.getElementById("message").textContent = "Enter age";
+                return;
+            }
+
+            if (number == "") {
+                document.getElementById("message").textContent = "Enter phone number";
+                return;
+            }
+
+            if (password == "") {
+                document.getElementById("message").textContent = "Enter password";
+                return;
+            }
+
+
+            localStorage.setItem("name", name);
+            localStorage.setItem("password", password);
+
+            alert("Registration successful!");
+
+            window.location.href = "index.html";
+        }
+
+    </script>
+
+</body>
+</html>
